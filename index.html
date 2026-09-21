@@ -9,10 +9,10 @@
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Tok Pisin Translator</h1>
+  <h1>Privacy Policy for Tok Pisin ↔ English Translator</h1>
   <p>Last updated: September 2026</p>
 
-  <p>Tok Pisin Translator translates Tok Pisin text into English entirely offline on the user's device.</p>
+  <p>Tok Pisin ↔ English Translator translates between Tok Pisin and English entirely offline on the user's device.</p>
 
   <h2>Data Collection</h2>
   <p>We do not collect, store, transmit, sell, or share any user data. Translation input, translation output, and all extension state never leave the user's device. The extension makes no network requests at any time.</p>
@@ -20,7 +20,8 @@
   <h2>Permissions</h2>
   <ul>
     <li><strong>offscreen</strong>: used to run the bundled Transformers.js and onnxruntime-web WebAssembly translation pipeline in a hidden offscreen document because Manifest V3 service workers cannot reliably run WebAssembly model inference directly. All inference happens locally.</li>
-    <li><strong>storage</strong>: used to save a single local counter of how many times the popup has been opened, so the extension can decide when to show its optional support message.</li>
+    <li><strong>storage</strong>: used to save a single local counter of how many times the popup has been opened, the user's chosen translation direction, and a one-time flag for the support message. All values are stored locally on the user's device.</li>
+    <li><strong>clipboardRead</strong>: used only when the user clicks the Paste button in the popup, to read text the user has explicitly copied to their clipboard and insert it into the translation input field. Clipboard content is never read automatically, is never stored, and is never transmitted to any server.</li>
   </ul>
 
   <h2>Third Parties</h2>
